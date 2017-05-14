@@ -1,0 +1,7 @@
+C:\Users\tpalan\Documents\Visual Studio 2017\Projects\TravelTracker_VS2017\TravelTracker.Domain\bin\Debug\netcoreapp1.1\TravelTracker.Domain.deps.json
+C:\Users\tpalan\Documents\Visual Studio 2017\Projects\TravelTracker_VS2017\TravelTracker.Domain\bin\Debug\netcoreapp1.1\TravelTracker.Domain.dll
+C:\Users\tpalan\Documents\Visual Studio 2017\Projects\TravelTracker_VS2017\TravelTracker.Domain\bin\Debug\netcoreapp1.1\TravelTracker.Domain.pdb
+C:\Users\tpalan\Documents\Visual Studio 2017\Projects\TravelTracker_VS2017\TravelTracker.Domain\obj\Debug\netcoreapp1.1\TravelTracker.Domain.csprojResolveAssemblyReference.cache
+C:\Users\tpalan\Documents\Visual Studio 2017\Projects\TravelTracker_VS2017\TravelTracker.Domain\obj\Debug\netcoreapp1.1\TravelTracker.Domain.AssemblyInfo.cs
+C:\Users\tpalan\Documents\Visual Studio 2017\Projects\TravelTracker_VS2017\TravelTracker.Domain\obj\Debug\netcoreapp1.1\TravelTracker.Domain.dll
+C:\Users\tpalan\Documents\Visual Studio 2017\Projects\TravelTracker_VS2017\TravelTracker.Domain\obj\Debug\netcoreapp1.1\TravelTracker.Domain.pdb

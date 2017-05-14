@@ -1,0 +1,65 @@
+@model TravelTracker.Domain.AirTravelQuery
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>AirTravelQuery</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <input type="hidden" asp-for="RequestId" />
+        <dt>
+            @Html.DisplayNameFor(model => model.QueryDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.QueryDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TentativeTripStartDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TentativeTripStartDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TentativeTripEndDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TentativeTripEndDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TravelType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TravelType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.QueryStatus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.QueryStatus)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Customer.CustomerId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TravelAgent)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TravelAgent.TravelAgentId)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </form>
+</div>

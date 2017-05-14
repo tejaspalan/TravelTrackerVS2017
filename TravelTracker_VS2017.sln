@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.7
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelTracker", "TravelTracker\TravelTracker.csproj", "{3E1F635C-5D32-4C54-8949-09C335B15682}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{5D56EB25-BFE4-4914-9776-26AB54C32CA1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{A8045857-88FD-4A3E-AD8E-B573BCDF7B62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelTracker.Domain", "TravelTracker.Domain\TravelTracker.Domain.csproj", "{79FA7A62-C304-43D5-8002-F047B9AD69D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelTracker.Data", "TravelTracker.Data\TravelTracker.Data.csproj", "{F435DDD1-4E05-4155-B3BE-D795B595FC83}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E1F635C-5D32-4C54-8949-09C335B15682}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E1F635C-5D32-4C54-8949-09C335B15682}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E1F635C-5D32-4C54-8949-09C335B15682}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E1F635C-5D32-4C54-8949-09C335B15682}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79FA7A62-C304-43D5-8002-F047B9AD69D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79FA7A62-C304-43D5-8002-F047B9AD69D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79FA7A62-C304-43D5-8002-F047B9AD69D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79FA7A62-C304-43D5-8002-F047B9AD69D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F435DDD1-4E05-4155-B3BE-D795B595FC83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F435DDD1-4E05-4155-B3BE-D795B595FC83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F435DDD1-4E05-4155-B3BE-D795B595FC83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F435DDD1-4E05-4155-B3BE-D795B595FC83}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{79FA7A62-C304-43D5-8002-F047B9AD69D9} = {A8045857-88FD-4A3E-AD8E-B573BCDF7B62}
+		{F435DDD1-4E05-4155-B3BE-D795B595FC83} = {5D56EB25-BFE4-4914-9776-26AB54C32CA1}
+	EndGlobalSection
+EndGlobal

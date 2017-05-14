@@ -1,0 +1,13 @@
+C:\Users\tpalan\Documents\Visual Studio 2017\Projects\TravelTracker_VS2017\TravelTracker\bin\Debug\netcoreapp1.1\TravelTracker.deps.json
+C:\Users\tpalan\Documents\Visual Studio 2017\Projects\TravelTracker_VS2017\TravelTracker\bin\Debug\netcoreapp1.1\TravelTracker.runtimeconfig.json
+C:\Users\tpalan\Documents\Visual Studio 2017\Projects\TravelTracker_VS2017\TravelTracker\bin\Debug\netcoreapp1.1\TravelTracker.runtimeconfig.dev.json
+C:\Users\tpalan\Documents\Visual Studio 2017\Projects\TravelTracker_VS2017\TravelTracker\bin\Debug\netcoreapp1.1\TravelTracker.dll
+C:\Users\tpalan\Documents\Visual Studio 2017\Projects\TravelTracker_VS2017\TravelTracker\bin\Debug\netcoreapp1.1\TravelTracker.pdb
+C:\Users\tpalan\Documents\Visual Studio 2017\Projects\TravelTracker_VS2017\TravelTracker\obj\Debug\netcoreapp1.1\TravelTracker.csprojResolveAssemblyReference.cache
+C:\Users\tpalan\Documents\Visual Studio 2017\Projects\TravelTracker_VS2017\TravelTracker\obj\Debug\netcoreapp1.1\TravelTracker.AssemblyInfo.cs
+C:\Users\tpalan\Documents\Visual Studio 2017\Projects\TravelTracker_VS2017\TravelTracker\obj\Debug\netcoreapp1.1\TravelTracker.dll
+C:\Users\tpalan\Documents\Visual Studio 2017\Projects\TravelTracker_VS2017\TravelTracker\obj\Debug\netcoreapp1.1\TravelTracker.pdb
+C:\Users\tpalan\Documents\Visual Studio 2017\Projects\TravelTracker_VS2017\TravelTracker\bin\Debug\netcoreapp1.1\TravelTracker.Data.dll
+C:\Users\tpalan\Documents\Visual Studio 2017\Projects\TravelTracker_VS2017\TravelTracker\bin\Debug\netcoreapp1.1\TravelTracker.Domain.dll
+C:\Users\tpalan\Documents\Visual Studio 2017\Projects\TravelTracker_VS2017\TravelTracker\bin\Debug\netcoreapp1.1\TravelTracker.Data.pdb
+C:\Users\tpalan\Documents\Visual Studio 2017\Projects\TravelTracker_VS2017\TravelTracker\bin\Debug\netcoreapp1.1\TravelTracker.Domain.pdb
