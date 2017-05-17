@@ -5,46 +5,43 @@ namespace TravelTracker.Data
 {
     public class AirTravelQueryContext : DbContext
     {
-        public DbSet<AirTravelQuery> AirTravelQuery { get; set; }
+        public DbSet<TravelTrackerQueryBase> Queries { get; set; }
+        public DbSet<TravelAgent> TravelAgents { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(
-              "Server = (localdb)\\mssqllocaldb; Database = TravelTrackerData; Trusted_Connection = True; ");
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=TravelTrackerDb;Trusted_Connection=True;");
         }
 
-        //protected override void OnModelCreating(ModelBuilder modelBuilder)
-        //{
-        //    //Defining Primary Key (Note that this is on the base type, not on any derived type)
-        //    modelBuilder.Entity<TravelTrackerQueryBase>()
-        //        .HasKey(query => query.RequestId);
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<AirTravelQuery>()
+                .ToTable("AirTravelQueries");
 
-        //    modelBuilder.Entity<TravelAgent>()
-        //        .HasKey(query => query.TravelAgentId);
+            modelBuilder.Entity<TravelTrackerQueryBase>()
+                .ToTable("TravelTrackerQueryBase");
 
-        //    modelBuilder.Entity<Customer>()
-        //        .HasKey(customer => customer.CustomerId);
+            modelBuilder.Entity<TravelTrackerQueryBase>()
+                .HasKey(queryBase => queryBase.RequestId);
 
-        //    //connecting query to travel agent
-        //    //making sure that it is required
-        //    //And if the query data is deleted, corresponding reference is also removed from the travel agent
-        //    modelBuilder.Entity<TravelTrackerQueryBase>()
-        //        .HasOne(query => query.TravelAgent)
-        //        .WithMany(agent => agent.Queries)
-        //        .IsRequired()
-        //        .OnDelete(Microsoft.EntityFrameworkCore.Metadata.DeleteBehavior.Cascade);
+            modelBuilder.Entity<TravelAgent>()
+                .HasKey(agent => agent.TravelAgentId);
 
-        //    modelBuilder.Entity<TravelTrackerQueryBase>()
-        //        .HasOne(query => query.Customer)
-        //        .WithMany(customer => customer.Queries)
-        //        .OnDelete(Microsoft.EntityFrameworkCore.Metadata.DeleteBehavior.Cascade);
+            modelBuilder.Entity<TravelQueryLog>()
+                .ToTable("QueryStatusChangeLogs")
+                .HasKey(log => log.LogIdentifier);
 
+            modelBuilder.Entity<TravelQueryLog>()
+                .HasOne(log => log.QueryBase)
+                .WithMany(queryBase => queryBase.HistoryLog)
+                .HasForeignKey(log => log.QueryRequestId)
+                .IsRequired();
 
-        //    //Setting up TPH (Table per Hierarchy)
-        //    //We may change this at a later point of time
-        //    modelBuilder.Entity<TravelTrackerQueryBase>()
-        //        .HasDiscriminator<string>("query_type")
-        //        .HasValue<TravelTrackerQueryBase>("query_base")
-        //        .HasValue<AirTravelQuery>("airTravelQuery");
-        //}
+            modelBuilder.Entity<TravelAgent>()
+                .HasMany(agent => agent.Queries)
+                .WithOne(queryBase => queryBase.TravelAgent)
+                .HasForeignKey(queryBase => queryBase.TravelAgentId)
+                .IsRequired();
+        }
     }
 }
