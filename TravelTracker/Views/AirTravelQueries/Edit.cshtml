@@ -1,0 +1,106 @@
+@model TravelTracker.Domain.AirTravelQuery
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form asp-action="Edit">
+    <div class="form-horizontal">
+        <h4>AirTravelQuery</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="TravelClass" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="TravelClass" class="form-control"></select>
+                <span asp-validation-for="TravelClass" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="TravelType" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="TravelType" class="form-control"></select>
+                <span asp-validation-for="TravelType" class="text-danger"></span>
+            </div>
+        </div>
+    <input type="hidden" asp-for="RequestId" />
+        <div class="form-group">
+            <label asp-for="TravelAgentId" class="control-label col-md-2"></label>
+            <div class="col-md-10">
+                <select asp-for="TravelAgentId" class="form-control" asp-items="ViewBag.TravelAgentId"></select>
+                <span asp-validation-for="TravelAgentId" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="CustomerContactNumber" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="CustomerContactNumber" class="form-control" />
+                <span asp-validation-for="CustomerContactNumber" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="CustomerName" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="CustomerName" class="form-control" />
+                <span asp-validation-for="CustomerName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="QueryDate" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="QueryDate" class="form-control" />
+                <span asp-validation-for="QueryDate" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="TentativeTripStartDate" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="TentativeTripStartDate" class="form-control" />
+                <span asp-validation-for="TentativeTripStartDate" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="TentativeTripEndDate" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="TentativeTripEndDate" class="form-control" />
+                <span asp-validation-for="TentativeTripEndDate" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="QueryStatus" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="QueryStatus" class="form-control"></select>
+                <span asp-validation-for="QueryStatus" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="NumberOfAdults" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="NumberOfAdults" class="form-control" />
+                <span asp-validation-for="NumberOfAdults" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="NumberOfChildren" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="NumberOfChildren" class="form-control" />
+                <span asp-validation-for="NumberOfChildren" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

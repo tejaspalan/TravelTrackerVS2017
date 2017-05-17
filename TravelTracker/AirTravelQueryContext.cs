@@ -2,7 +2,7 @@
 using TravelTracker.Domain;
 using static TravelTracker.Domain.TravelTrackerEnums;
 
-namespace TravelTracker.Data
+namespace TravelTracker
 {
     public class AirTravelQueryContext : DbContext
     {
@@ -70,5 +70,7 @@ namespace TravelTracker.Data
                 .HasForeignKey(queryBase => queryBase.TravelAgentId)
                 .IsRequired();
         }
+
+        public DbSet<TravelTracker.Domain.AirTravelQuery> AirTravelQuery { get; set; }
     }
 }
