@@ -14,14 +14,14 @@
         <div class="form-group">
             <label asp-for="TravelClass" class="col-md-2 control-label"></label>
             <div class="col-md-10">
-                <select asp-for="TravelClass" class="form-control"></select>
+                <select asp-for="TravelClass" class="form-control" asp-items="ViewBag.AirTravelClass"></select>
                 <span asp-validation-for="TravelClass" class="text-danger"></span>
             </div>
         </div>
         <div class="form-group">
             <label asp-for="TravelType" class="col-md-2 control-label"></label>
             <div class="col-md-10">
-                <select asp-for="TravelType" class="form-control"></select>
+                <select asp-for="TravelType" class="form-control" asp-items="ViewBag.TravelType"></select>
                 <span asp-validation-for="TravelType" class="text-danger"></span>
             </div>
         </div>
@@ -71,7 +71,7 @@
         <div class="form-group">
             <label asp-for="QueryStatus" class="col-md-2 control-label"></label>
             <div class="col-md-10">
-                <select asp-for="QueryStatus" class="form-control"></select>
+                <select asp-for="QueryStatus" class="form-control" asp-items="ViewBag.QueryStatus"></select>
                 <span asp-validation-for="QueryStatus" class="text-danger"></span>
             </div>
         </div>

@@ -12,76 +12,76 @@
         <hr />
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <div class="form-group">
-            <label asp-for="TravelClass" class="col-md-2 control-label"></label>
+            <label asp-for="TravelClass" class="col-md-2 control-label">Travel Class</label>
             <div class="col-md-10">
-                <select asp-for="TravelClass" class="form-control"></select>
+                <select asp-for="TravelClass" asp-items="Html.GetEnumSelectList<TravelTracker.Domain.TravelTrackerEnums.AirTravelClass>()"></select>
                 <span asp-validation-for="TravelClass" class="text-danger"></span>
             </div>
         </div>
         <div class="form-group">
-            <label asp-for="TravelType" class="col-md-2 control-label"></label>
+            <label asp-for="TravelType" class="col-md-2 control-label">Travel Type</label>
             <div class="col-md-10">
-                <select asp-for="TravelType" class="form-control"></select>
+                <select asp-for="TravelType" asp-items="Html.GetEnumSelectList<TravelTracker.Domain.TravelTrackerEnums.TravelType>()"></select>
                 <span asp-validation-for="TravelType" class="text-danger"></span>
             </div>
         </div>
         <div class="form-group">
-            <label asp-for="TravelAgentId" class="col-md-2 control-label"></label>
+            <label asp-for="TravelAgentId" class="col-md-2 control-label">Travel Agent Id</label>
             <div class="col-md-10">
                 <select asp-for="TravelAgentId" class ="form-control" asp-items="ViewBag.TravelAgentId"></select>
             </div>
         </div>
         <div class="form-group">
-            <label asp-for="CustomerContactNumber" class="col-md-2 control-label"></label>
+            <label asp-for="CustomerContactNumber" class="col-md-2 control-label">Customer Contact Number</label>
             <div class="col-md-10">
                 <input asp-for="CustomerContactNumber" class="form-control" />
                 <span asp-validation-for="CustomerContactNumber" class="text-danger"></span>
             </div>
         </div>
         <div class="form-group">
-            <label asp-for="CustomerName" class="col-md-2 control-label"></label>
+            <label asp-for="CustomerName" class="col-md-2 control-label">Customer Name</label>
             <div class="col-md-10">
                 <input asp-for="CustomerName" class="form-control" />
                 <span asp-validation-for="CustomerName" class="text-danger"></span>
             </div>
         </div>
         <div class="form-group">
-            <label asp-for="QueryDate" class="col-md-2 control-label"></label>
+            <label asp-for="QueryDate" class="col-md-2 control-label">Query Date</label>
             <div class="col-md-10">
-                <input asp-for="QueryDate" class="form-control" />
+                <input asp-for="QueryDate" class="form-control" value="@ViewBag.QueryDate" />
                 <span asp-validation-for="QueryDate" class="text-danger"></span>
             </div>
         </div>
         <div class="form-group">
-            <label asp-for="TentativeTripStartDate" class="col-md-2 control-label"></label>
+            <label asp-for="TentativeTripStartDate" class="col-md-2 control-label">Tentative Trip Start Date</label>
             <div class="col-md-10">
                 <input asp-for="TentativeTripStartDate" class="form-control" />
                 <span asp-validation-for="TentativeTripStartDate" class="text-danger"></span>
             </div>
         </div>
         <div class="form-group">
-            <label asp-for="TentativeTripEndDate" class="col-md-2 control-label"></label>
+            <label asp-for="TentativeTripEndDate" class="col-md-2 control-label">Tentative Trip End Date</label>
             <div class="col-md-10">
                 <input asp-for="TentativeTripEndDate" class="form-control" />
                 <span asp-validation-for="TentativeTripEndDate" class="text-danger"></span>
             </div>
         </div>
         <div class="form-group">
-            <label asp-for="QueryStatus" class="col-md-2 control-label"></label>
+            <label asp-for="QueryStatus" class="col-md-2 control-label">Query Status</label>
             <div class="col-md-10">
-                <select asp-for="QueryStatus" class="form-control"></select>
+                <select asp-for="QueryStatus" asp-items="Html.GetEnumSelectList<TravelTracker.Domain.TravelTrackerEnums.QueryStatus>()"></select>
                 <span asp-validation-for="QueryStatus" class="text-danger"></span>
             </div>
         </div>
         <div class="form-group">
-            <label asp-for="NumberOfAdults" class="col-md-2 control-label"></label>
+            <label asp-for="NumberOfAdults" class="col-md-2 control-label">Number Of Adults</label>
             <div class="col-md-10">
                 <input asp-for="NumberOfAdults" class="form-control" />
                 <span asp-validation-for="NumberOfAdults" class="text-danger"></span>
             </div>
         </div>
         <div class="form-group">
-            <label asp-for="NumberOfChildren" class="col-md-2 control-label"></label>
+            <label asp-for="NumberOfChildren" class="col-md-2 control-label">Number Of Children</label>
             <div class="col-md-10">
                 <input asp-for="NumberOfChildren" class="form-control" />
                 <span asp-validation-for="NumberOfChildren" class="text-danger"></span>

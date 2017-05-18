@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using TravelTracker;
 using TravelTracker.Domain;
+using static TravelTracker.Domain.TravelTrackerEnums;
+using TravelTracker.Helpers;
 
 namespace TravelTracker.Controllers
 {
@@ -46,6 +48,8 @@ namespace TravelTracker.Controllers
         // GET: TravelAgents/Create
         public IActionResult Create()
         {
+            List<SelectListItem> roleTypeList = TravelTrackerEnumHelpers.GetTravelAgentRoleTypes();
+            ViewBag.RoleTypes = roleTypeList;
             return View();
         }
 
@@ -78,6 +82,8 @@ namespace TravelTracker.Controllers
             {
                 return NotFound();
             }
+            List<SelectListItem> roleTypeList = TravelTrackerEnumHelpers.GetTravelAgentRoleTypes();
+            ViewBag.RoleTypes = roleTypeList;
             return View(travelAgent);
         }
 

@@ -7,12 +7,15 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using TravelTracker;
 using TravelTracker.Domain;
+using TravelTracker.Helpers;
 
 namespace TravelTracker.Controllers
 {
     public class AirTravelQueriesController : Controller
     {
         private readonly AirTravelQueryContext _context;
+
+        public object Helper { get; private set; }
 
         public AirTravelQueriesController(AirTravelQueryContext context)
         {
@@ -49,6 +52,7 @@ namespace TravelTracker.Controllers
         public IActionResult Create()
         {
             ViewData["TravelAgentId"] = new SelectList(_context.TravelAgents, "TravelAgentId", "AgentName");
+            ViewData["QueryDate"] = DateTime.Now;
             return View();
         }
 
@@ -83,6 +87,9 @@ namespace TravelTracker.Controllers
                 return NotFound();
             }
             ViewData["TravelAgentId"] = new SelectList(_context.TravelAgents, "TravelAgentId", "AgentName", airTravelQuery.TravelAgentId);
+            ViewData["TravelType"] = TravelTrackerEnumHelpers.GetTravelTypes();
+            ViewData["AirTravelClass"] = TravelTrackerEnumHelpers.GetAirTravelTypes();
+            ViewData["QueryStatus"] = TravelTrackerEnumHelpers.GetQueryStatusOptions();
             return View(airTravelQuery);
         }
 
